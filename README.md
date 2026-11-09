@@ -37,7 +37,7 @@ Choose one chat, one project or everything; download a ZIP or write straight int
 
 | Platform | File | Notes |
 |---|---|---|
-| macOS (Apple Silicon, 11+) | [`Chatkeep-1.2.0-macos-arm64.dmg`](https://github.com/badnorouz/chatkeep/releases/download/v1.2.0/Chatkeep-1.2.0-macos-arm64.dmg) | First launch: right-click → **Open** |
+| macOS (Apple Silicon, 11+) | [`Chatkeep-1.2.0-macos-arm64.dmg`](https://github.com/badnorouz/chatkeep/releases/download/v1.2.0/Chatkeep-1.2.0-macos-arm64.dmg) | First launch: if macOS can't verify the app, open **System Settings → Privacy & Security → Open Anyway** (or run `xattr -cr /Applications/Chatkeep.app`) |
 | Windows 10/11 (64-bit) | [`Chatkeep-1.2.0-windows-x64-Setup.exe`](https://github.com/badnorouz/chatkeep/releases/download/v1.2.0/Chatkeep-1.2.0-windows-x64-Setup.exe) | If SmartScreen warns: **More info → Run anyway** |
 | Linux (x86_64) | [`Chatkeep-1.2.0-linux-x86_64.tar.gz`](https://github.com/badnorouz/chatkeep/releases/download/v1.2.0/Chatkeep-1.2.0-linux-x86_64.tar.gz) | Extract, then run `./install.sh` |
 
