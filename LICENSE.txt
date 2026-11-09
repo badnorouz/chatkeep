@@ -1,0 +1,11 @@
+CHATKEEP END-USER LICENSE AGREEMENT
+
+Chatkeep is provided free of charge.
+
+1. License. You may download, install and use Chatkeep, free of charge, on any computers you own or control, for personal or business use.
+2. Redistribution. You may share the unmodified installers from the official download page. You may not sell Chatkeep, repackage it, or remove its notices.
+3. Source code. The Chatkeep source code is not included in this license and remains the property of its author.
+4. Your data. Chatkeep reads and copies chat files that already exist on your computer, and files you import. It does not upload them anywhere. You are responsible for keeping your backups safe.
+5. Third-party names. Chatkeep is independent and is not affiliated with, endorsed by or sponsored by Anthropic, PBC. "Claude" is a trademark of Anthropic, PBC.
+6. No warranty. Chatkeep is provided "as is", without warranty of any kind. Always keep more than one copy of data that matters to you.
+7. Liability. To the maximum extent allowed by law, the author is not liable for lost data or any indirect damages arising from the use of Chatkeep.
