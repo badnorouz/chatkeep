@@ -102,7 +102,7 @@ h1{font-size:clamp(38px,6.4vw,76px);line-height:1.04;letter-spacing:-.045em;font
 .bar{height:38px;background:var(--card2);display:flex;align-items:center;gap:8px;padding:0 15px;border-bottom:1px solid var(--line)}
 .bar i{width:12px;height:12px;border-radius:50%;background:#ff5f57}.bar i:nth-child(2){background:#febc2e}.bar i:nth-child(3){background:#28c840}
 .bar span{margin:0 auto;font-size:12.5px;color:var(--dim);transform:translateX(-26px)}
-.frame img{width:100%}
+.frame img{width:100%;height:auto}
 .stage::before{content:"";position:absolute;inset:8% 4% -4%;border-radius:40px;background:radial-gradient(ellipse at 50% 60%,var(--glow),transparent 70%);filter:blur(50px);z-index:-1}
 .chip{position:absolute;display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:15px;background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(12px);border:1px solid var(--line2);box-shadow:0 18px 40px -14px rgba(0,0,0,.55);font-size:14px;font-weight:600;animation:bob 6s ease-in-out infinite;z-index:3}
 .chip em{font-style:normal;color:var(--mut);font-weight:500;font-size:12.5px;display:block;margin-top:-2px}
@@ -182,7 +182,9 @@ footer{border-top:1px solid var(--line);padding:46px 0 54px;color:var(--dim);fon
 .xfer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:56px;align-items:center}
 .xtxt h2{max-width:560px}
 .tools{display:flex;flex-wrap:wrap;gap:9px;margin:26px 0 6px}
-.tools span{padding:8px 15px;border-radius:99px;border:1px solid var(--line2);background:var(--card);font-size:14px;font-weight:600;transition:.25s}
+.tools span{display:inline-flex;align-items:center;gap:9px;padding:6px 15px 6px 7px;border-radius:99px;border:1px solid var(--line2);background:var(--card);font-size:14px;font-weight:600;transition:.25s}
+.tools i{width:27px;height:27px;border-radius:9px;display:grid;place-items:center;flex:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
+.tools i svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 .tools span:hover{border-color:var(--a);color:var(--a2);transform:translateY(-2px)}
 .steps{list-style:none;margin:30px 0 8px;display:flex;flex-direction:column;gap:18px}
 .steps li{display:flex;gap:16px;align-items:flex-start}
@@ -322,7 +324,13 @@ footer{border-top:1px solid var(--line);padding:46px 0 54px;color:var(--dim);fon
         <h2 class="rv d1">Switching AI tools? <span class="grad">Take your chats with you.</span></h2>
         <p class="sub rv d2">Your history shouldn't be locked to one app. Chatkeep turns your Claude conversations into files that other AI tools actually read — so the next agent starts with the context of the last one.</p>
         <div class="tools rv d2">
-          <span>Codex CLI</span><span>OpenCode</span><span>Antigravity</span><span>Gemini CLI</span><span>Cursor</span><span>ChatGPT</span><span>Any AI</span>
+          <span><i style="background:linear-gradient(135deg,#818cf8,#4f46e5)"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4.5l-4 15"/></svg></i>Codex CLI</span>
+          <span><i style="background:linear-gradient(135deg,#38bdf8,#0369a1)"><svg viewBox="0 0 24 24"><path d="M5 7l5 5-5 5M12 18h7"/></svg></i>OpenCode</span>
+          <span><i style="background:linear-gradient(135deg,#a78bfa,#6d28d9)"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.4"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-32 12 12)"/></svg></i>Antigravity</span>
+          <span><i style="background:linear-gradient(135deg,#60a5fa,#1d4ed8)"><svg viewBox="0 0 24 24"><path d="M12 3c.9 5 4 8.100 9 9-5 .9-8.100 4-9 9-.9-5-4-8.100-9-9 5-.9 8.100-4 9-9z"/></svg></i>Gemini CLI</span>
+          <span><i style="background:linear-gradient(135deg,#6b7280,#111827)"><svg viewBox="0 0 24 24"><path d="M5 3l14 7-6 2-2 6z"/></svg></i>Cursor</span>
+          <span><i style="background:linear-gradient(135deg,#34d399,#047857)"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.600 7.100L4 20l1-4.600A8 8 0 1 1 21 12z"/></svg></i>ChatGPT</span>
+          <span><i style="background:linear-gradient(135deg,#fbbf24,#d97706)"><svg viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg></i>Any AI</span>
         </div>
         <ul class="steps rv d3">
           <li><b>1</b><div><strong>Pick what to move</strong><span>One chat, a whole project, or everything.</span></div></li>
@@ -383,7 +391,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 54px;color:var(--dim);fon
 
 <footer><div class="wrap foot">
   <div><a class="brand" href="#top"><img src="assets/icon-512.png" alt="" width="32" height="32">Chatkeep</a>
-    <p>Chatkeep is an independent app and is not affiliated with, endorsed by or sponsored by Anthropic. “Claude” is a trademark of Anthropic, PBC.</p></div>
+    <p>Chatkeep is an independent app and is not affiliated with, endorsed by or sponsored by Anthropic. “Claude” is a trademark of Anthropic, PBC. Other product names mentioned are trademarks of their respective owners and are used only to describe compatibility.</p></div>
   <div class="links"><a href="https://github.com/badnorouz/chatkeep/blob/main/PRIVACY.md" rel="noopener">Privacy</a><a href="https://github.com/badnorouz/chatkeep/blob/main/LICENSE.txt" rel="noopener">License</a><a href="https://github.com/badnorouz/chatkeep/releases" rel="noopener">Releases</a><a href="https://github.com/badnorouz/chatkeep" rel="noopener">GitHub</a></div>
 </div></footer>
 
