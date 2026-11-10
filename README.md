@@ -16,30 +16,31 @@ Chatkeep is a **free** desktop app that keeps your **Claude Code**, **Cowork** a
 - **One-click backup** of Claude Code and Cowork chats and their files; nothing is ever deleted from your backup
 - **Import claude.ai Export Data** — even the manifest with download links; duplicates are skipped
 - **Every file Claude made** in one place, with preview, download and export to Markdown / HTML / JSON
-- **Transfer to another AI** — take your history to Codex CLI, OpenCode, Antigravity, Gemini CLI, Cursor, ChatGPT or any AI (see below)
+- **Transfer to another AI — automatically** — your chats appear as real chats in Codex CLI, OpenCode and Gemini CLI, and Antigravity, ChatGPT or any AI can read them too (see below)
 - **Private by design** — no account, no cloud, no tracking, works offline
 - Dark and light themes
 
-## Transfer: switching to another AI tool
+## Transfer: switching to another AI tool — automatically
 
-Other apps cannot import chat histories, so Chatkeep prepares the files they **do** read — and never touches another app's own data.
+Pick the tools you use and click once. Chatkeep finds them on your computer and loads your history into them.
 
-| Target | What you get |
+| Tool | What happens |
 |---|---|
-| Codex CLI · OpenCode · Cursor and other agents | A clearly marked block in `AGENTS.md`, a generated `.chatkeep/PROJECT_MEMORY.md` (what was asked, which files changed) and full transcripts in `.chatkeep/transcripts/` |
-| Antigravity · Gemini CLI | The same, plus `GEMINI.md` |
-| ChatGPT | Numbered Markdown parts you upload to a Project, and a ready-to-paste starter prompt |
-| Any AI | Plain Markdown transcripts and an index |
+| **OpenCode** | Your Claude Code chats are loaded as **real chats** (using OpenCode's own `import`) and appear in its session list |
+| **Codex CLI** | Your Claude Code chats are written as **real Codex sessions** and appear in its thread list |
+| **Gemini CLI** | Your Claude Code chats appear as **real sessions** of the matching project folder |
+| **Antigravity** | Reads a note that points to all your history (it keeps its own chats in a private format) |
+| ChatGPT · Cursor · any AI | A package you prepare by hand: numbered Markdown parts and a starter prompt, or `AGENTS.md` + transcripts |
 
-Choose one chat, one project or everything; download a ZIP or write straight into your project folder. Your own `AGENTS.md` / `GEMINI.md` text is never overwritten (Chatkeep only manages its own marked block), and passwords, API keys and tokens are hidden automatically.
+On top of that, everything — every project's digest, all chats (including claude.ai) and the files Claude created — is saved in one folder, `Chatkeep-Transfer`, and each selected tool gets a small, clearly marked note in its global instructions file pointing to it. Your own text in those files is never changed, a one-time backup is kept, re-running updates instead of duplicating, and **Remove** undoes it. Passwords, API keys and tokens are hidden automatically.
 
-## Download (v1.2.1)
+## Download (v1.3.0)
 
 | Platform | File | Notes |
 |---|---|---|
-| macOS (Apple Silicon, 11+) | [`Chatkeep-1.2.1-macos-arm64.dmg`](https://github.com/badnorouz/chatkeep/releases/download/v1.2.1/Chatkeep-1.2.1-macos-arm64.dmg) | First launch: if macOS can't verify the app, open **System Settings → Privacy & Security → Open Anyway** (or run `xattr -cr /Applications/Chatkeep.app`) |
-| Windows 10/11 (64-bit) | [`Chatkeep-1.2.1-windows-x64-Setup.exe`](https://github.com/badnorouz/chatkeep/releases/download/v1.2.1/Chatkeep-1.2.1-windows-x64-Setup.exe) | If SmartScreen warns: **More info → Run anyway** |
-| Linux (x86_64) | [`Chatkeep-1.2.1-linux-x86_64.tar.gz`](https://github.com/badnorouz/chatkeep/releases/download/v1.2.1/Chatkeep-1.2.1-linux-x86_64.tar.gz) | Extract, then run `./install.sh` |
+| macOS (Apple Silicon, 11+) | [`Chatkeep-1.3.0-macos-arm64.dmg`](https://github.com/badnorouz/chatkeep/releases/download/v1.3.0/Chatkeep-1.3.0-macos-arm64.dmg) | First launch: if macOS can't verify the app, open **System Settings → Privacy & Security → Open Anyway** (or run `xattr -cr /Applications/Chatkeep.app`) |
+| Windows 10/11 (64-bit) | [`Chatkeep-1.3.0-windows-x64-Setup.exe`](https://github.com/badnorouz/chatkeep/releases/download/v1.3.0/Chatkeep-1.3.0-windows-x64-Setup.exe) | If SmartScreen warns: **More info → Run anyway** |
+| Linux (x86_64) | [`Chatkeep-1.3.0-linux-x86_64.tar.gz`](https://github.com/badnorouz/chatkeep/releases/download/v1.3.0/Chatkeep-1.3.0-linux-x86_64.tar.gz) | Extract, then run `./install.sh` |
 
 SHA-256 checksums are attached to the release as `SHA256SUMS.txt`. The apps are new and not yet code-signed, which is why macOS and Windows show a first-launch warning.
 
